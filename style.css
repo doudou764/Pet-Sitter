@@ -550,3 +550,19 @@ textarea {
   transform: translateY(-2px);
   opacity: 0.95;
 }
+
+.quick-proof {
+  margin-top: 18px;
+  color: #d1fae5;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+#avis .faq-card strong {
+  color: #ffffff;
+}
+
+#zone .notice,
+#infos-plus .service-card {
+  min-height: 100%;
+}
