@@ -46,6 +46,8 @@
   </script>
 
   <link rel="stylesheet" href="style.css" />
+  <meta name="robots" content="index,follow">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <header class="header">
@@ -451,6 +453,10 @@
             <textarea name="message" required placeholder="Décrivez votre besoin et les informations importantes concernant votre animal"></textarea>
             <input type="hidden" name="_subject" value="Nouvelle demande client - Pet sitter Gouttefangeas Yann" />
             <input type="hidden" name="_captcha" value="false" />
+            <label class="consent-line">
+  <input type="checkbox" name="privacy_consent" required>
+  J’accepte la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a>.
+</label>
             <button class="btn btn-primary" type="submit">Envoyer la demande</button>
             <p class="form-help">Formulaire connecté : les demandes sont envoyées directement sur votre email.</p>
             <p class="form-status" id="form-status" aria-live="polite"></p>
@@ -470,6 +476,15 @@
         <a href="#services">Services</a> ·
         <a href="#tarifs">Tarifs</a> ·
         <a href="#contact">Contact</a>
+        <div class="footer-legal">
+  <a href="mentions-legales.html">Mentions légales</a>
+  <span>·</span>
+  <a href="confidentialite.html">Confidentialité</a>
+  <span>·</span>
+  <a href="cookies.html">Cookies</a>
+  <span>·</span>
+  <a href="conditions.html">Conditions</a>
+</div>
       </div>
     </div>
   </footer>
@@ -486,5 +501,41 @@
   </a>
 
   <script src="script.js"></script>
+  <div id="cookie-banner" class="cookie-banner" hidden>
+  <p>
+    Ce site utilise des cookies pour améliorer l’expérience utilisateur.
+    <a href="cookies.html">En savoir plus</a>
+  </p>
+  <div class="cookie-actions">
+    <button id="accept-cookies" type="button">Accepter</button>
+    <button id="refuse-cookies" type="button">Refuser</button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const refuseBtn = document.getElementById('refuse-cookies');
+
+    if (!banner || !acceptBtn || !refuseBtn) return;
+
+    const cookieChoice = localStorage.getItem('cookie_consent');
+
+    if (!cookieChoice) {
+      banner.hidden = false;
+    }
+
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'accepted');
+      banner.hidden = true;
+    });
+
+    refuseBtn.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'refused');
+      banner.hidden = true;
+    });
+  })();
+</script>
 </body>
 </html>
