@@ -835,3 +835,31 @@ textarea {
       font-size: 12px;
     }
   }
+
+/* Centrage de toute la section des suppléments */
+.supplements-section {
+  width: calc(100% - 40px);
+  max-width: 1090px;
+  margin: 75px auto !important;
+  box-sizing: border-box;
+}
+
+/* Garder les 3 cartes dans la largeur de la section */
+.supplements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+/* Adapter l'affichage aux téléphones */
+@media (max-width: 760px) {
+  .supplements-section {
+    width: calc(100% - 32px);
+    margin: 50px auto !important;
+  }
+
+  .supplements-grid {
+    grid-template-columns: 1fr;
+  }
+}
