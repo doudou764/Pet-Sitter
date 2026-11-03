@@ -50,6 +50,81 @@
   <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#ffffff">
 </head>
+
+
+<!-- BANDEAU D'INFORMATION TARIFAIRE -->
+<div class="pricing-notice" role="status">
+  <span class="pricing-notice-icon">📢</span>
+  <p>
+    <strong>Information tarifs :</strong>
+    majoration de <strong>+25 % les jours fériés</strong> et de
+    <strong>+50 % les 24 et 25 décembre, ainsi que les 31 décembre
+    et 1er janvier.</strong>
+    Le tarif total est communiqué avant confirmation de la réservation.
+  </p>
+  <button
+    class="pricing-notice-close"
+    type="button"
+    aria-label="Fermer le bandeau"
+    onclick="this.parentElement.remove()">
+    &times;
+  </button>
+</div>
+
+<style>
+  .pricing-notice {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 22px;
+    background: linear-gradient(100deg, #142b2a, #21172e);
+    border-bottom: 1px solid #35554e;
+    color: #f8fafc;
+    font-family: inherit;
+  }
+
+  .pricing-notice-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .pricing-notice p {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .pricing-notice strong {
+    color: #79f0c6;
+  }
+
+  .pricing-notice-close {
+    border: 0;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .pricing-notice-close:hover {
+    color: white;
+  }
+
+  @media (max-width: 600px) {
+    .pricing-notice {
+      align-items: flex-start;
+      padding: 12px;
+      gap: 9px;
+    }
+
+    .pricing-notice p {
+      font-size: 12px;
+    }
+  }
+</style>
+
+  
 <body>
   <header class="header">
     <div class="container header-inner">
