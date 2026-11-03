@@ -784,3 +784,54 @@ textarea {
     padding: 20px;
   }
 }
+
+  .pricing-notice {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 22px;
+    background: linear-gradient(100deg, #142b2a, #21172e);
+    border-bottom: 1px solid #35554e;
+    color: #f8fafc;
+    font-family: inherit;
+  }
+
+  .pricing-notice-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .pricing-notice p {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .pricing-notice strong {
+    color: #79f0c6;
+  }
+
+  .pricing-notice-close {
+    border: 0;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .pricing-notice-close:hover {
+    color: white;
+  }
+
+  @media (max-width: 600px) {
+    .pricing-notice {
+      align-items: flex-start;
+      padding: 12px;
+      gap: 9px;
+    }
+
+    .pricing-notice p {
+      font-size: 12px;
+    }
+  }
